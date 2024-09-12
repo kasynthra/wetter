@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: rgb(63, 128, 224);
+  color: rgb(209, 81, 209);
   text-decoration: none;
 }
 
@@ -32,7 +32,7 @@ header {
 }
 
 .search-form-button {
-  background-color: rgb(63, 128, 224);
+  background-color: rgb(209, 81, 209);
   padding: 15px 30px;
   margin-left: 5px;
   border: none;
