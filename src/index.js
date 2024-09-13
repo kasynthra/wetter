@@ -7,6 +7,9 @@ function refreshWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let speedElement = document.querySelector("#speed");
   let date = new Date(response.data.time * 1000);
+  let icon = document.querySelector("#icon");
+
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
@@ -44,12 +47,12 @@ function searchCity(city) {
 
 function handleSearchSubmit(event) {
   event.preventDefault();
-  let searchInput = document.querySelector("#searching-form-input");
+  let searchInput = document.querySelector("#search-form-input");
 
   searchCity(searchInput.value);
 }
 
-let searchFormElement = document.querySelector("#searching-form");
+let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Tokyo");
